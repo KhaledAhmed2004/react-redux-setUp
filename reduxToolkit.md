@@ -84,6 +84,12 @@
    - Subscribed components re-render or update their content to reflect the new state.  
      For example, a shopping cart component updates to display the new item.
 
+7. **Slice:**
+  -A slice in Redux Toolkit is like a small section or part of the big "state" of your app. Imagine your app’s state is a big pie, and each slice of the pie is responsible for managing a specific feature or data. For example:
+
+    -A userSlice might handle everything about the user (name, email, etc.).  
+    -A cartSlice might handle the shopping cart (items, total price, etc.).
+
 ---
 
 ### Summary of Redux Flow
