@@ -65,8 +65,6 @@
 
 ---
 
----
-
 ### Redux Flow
 
 1. **Action is Taken**:  
