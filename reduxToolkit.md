@@ -1,5 +1,21 @@
 # Redux Toolkit
 
+### Folder Structure
+
+```plaintext
+├── src/
+│   └── redux/                           **// Contains all Redux-related files**
+│       ├── api/                         **// Manages API services**
+│       │   └── baseApi.ts               **// Base API configuration using RTK Query**
+│       ├── features/                    **// Contains feature-specific slices and APIs**
+│       │   └── example/                 
+│       │       ├── exampleSlice.ts      **// State logic and actions for "example"**
+│       │       └── exampleApi.ts        **// API endpoints related to "example"**
+│       ├── store.ts                     **// Configures the Redux store**
+│       └── hook.ts                      **// Custom hooks like useAppSelector/useAppDispatch**
+└── ...
+```
+
 ## How Redux Works:
 
 ### Redux Terminology
@@ -40,6 +56,14 @@
   1. Dispatching actions.
   2. Maintaining the state.
   3. Notifying subscribers when the state changes.
+
+- **Slice**  
+  A slice is a small, feature-specific part of the Redux state. Each slice manages its own state, actions, and reducers.  
+  Examples:  
+  - A `userSlice` manages user-related state (name, email, etc.).  
+  - A `cartSlice` manages shopping cart state (items, total price, etc.).
+
+---
 
 ---
 
@@ -84,13 +108,6 @@
    - Subscribed components re-render or update their content to reflect the new state.  
      For example, a shopping cart component updates to display the new item.
 
-7. **Slice:**
-  -A slice in Redux Toolkit is like a small section or part of the big "state" of your app. Imagine your app’s state is a big pie, and each slice of the pie is responsible for managing a specific feature or data. For example:
-
-    -A userSlice might handle everything about the user (name, email, etc.).  
-    -A cartSlice might handle the shopping cart (items, total price, etc.).
-
----
 
 ### Summary of Redux Flow
 
@@ -99,6 +116,14 @@
 3. The **reducer** processes the action and updates the state.  
 4. The **store** updates its state and notifies subscribers.  
 5. The **UI** re-renders to reflect the updated state.
+
+
+
+
+
+
+
+
 
 
 
